@@ -25,6 +25,9 @@ jobs:
     - name: Validate composer.json
       run: composer validate --strict
 
+    - name: Update composer.json
+      run: composer update --no-interaction --prefer-dist
+
     - name: Install dependencies
       run: composer install --no-interaction --prefer-dist
 
